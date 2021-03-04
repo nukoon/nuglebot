@@ -1,6 +1,6 @@
 <launch>
   <!-- Arguments -->
-  <arg name="map_file" default="$(find nuglebot)/map/small_room.yaml"/>
+  <arg name="map_file" default="$(find nuglebot)/map/map001.yaml"/>
   <arg name="move_forward_only" default="true"/>
 
   <!-- Map server -->

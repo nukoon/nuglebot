@@ -1,7 +1,6 @@
 <launch>
   <!-- Arguments -->
   <arg name="map_file" default="$(find nuglebot)/map/map001.yaml"/>
-  <arg name="move_forward_only" default="true"/>
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
@@ -11,7 +10,6 @@
 
   <!-- move_base -->
   <include file="$(find nuglebot)/launch/move_base.launch">
-    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
   </include>
 
   <!-- rviz -->

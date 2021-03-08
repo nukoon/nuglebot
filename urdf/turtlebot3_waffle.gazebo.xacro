@@ -9,47 +9,42 @@
   </gazebo>
 
   <gazebo reference="wheel_left_link">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
-    <minDepth>0.001</minDepth>
+    <mu1>100</mu1>
+    <mu2>100</mu2>
+    <kp>10000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.01</minDepth>
     <maxVel>0.1</maxVel>
-    <fdir1>1 0 0</fdir1>
+  <!--  <fdir1>1 0 0</fdir1>-->
     <material>Gazebo/FlatBlack</material>
   </gazebo>
 
   <gazebo reference="wheel_right_link">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
-    <kp>500000.0</kp>
-    <kd>10.0</kd>
-    <minDepth>0.001</minDepth>
+    <mu1>100</mu1>
+    <mu2>100</mu2>
+    <kp>10000000.0</kp>
+    <kd>1.0</kd>
+    <minDepth>0.01</minDepth>
     <maxVel>0.1</maxVel>
-    <fdir1>1 0 0</fdir1>
+   <!--   <fdir1>1 0 0</fdir1>-->
     <material>Gazebo/FlatBlack</material>
   </gazebo>
 
-  <gazebo reference="caster_back_right_link">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
-    <kp>1000000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.001</minDepth>
-    <maxVel>1.0</maxVel>
+ <gazebo reference="caster_back_right_link">
     <material>Gazebo/FlatBlack</material>
   </gazebo>
 
   <gazebo reference="caster_back_left_link">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
-    <kp>1000000.0</kp>
-    <kd>100.0</kd>
-    <minDepth>0.001</minDepth>
-    <maxVel>1.0</maxVel>
     <material>Gazebo/FlatBlack</material>
   </gazebo>
 
+ <gazebo reference="caster_front_right_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="caster_front_left_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
  
 
   <gazebo>
@@ -57,7 +52,7 @@
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
-      <odometrySource>map</odometrySource>
+      <odometrySource>world</odometrySource>
       <publishOdomTF>true</publishOdomTF>
       <robotBaseFrame>base_footprint</robotBaseFrame>
       <publishWheelTF>false</publishWheelTF>
@@ -80,7 +75,7 @@
     <material>Gazebo/FlatBlack</material>
     <sensor type="ray" name="lds_lfcd_sensor">
       <pose>0 0 0 0 0 0</pose>
-      <visualize>false</visualize>
+      <visualize>true</visualize>
       <update_rate>10</update_rate>
       <ray>
         <scan>

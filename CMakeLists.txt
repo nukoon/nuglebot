@@ -22,6 +22,7 @@ install(DIRECTORY
   urdf
   rviz
   config
+  meshes
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
